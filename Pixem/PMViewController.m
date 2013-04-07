@@ -7,8 +7,14 @@
 //
 
 #import "PMViewController.h"
+#import "PMPixemView.h"
+#import "PMPixem.h"
 
 @interface PMViewController ()
+{
+    __weak IBOutlet PMPixemView *pixelView;
+    PMPixem *pixem;
+}
 
 @end
 
@@ -18,6 +24,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    pixem = [[PMPixem alloc] initWithPixelsWide:40 high:40];
+    pixelView.pixem = pixem;
+    
+    [pixelView setNeedsDisplay];
 }
 
 - (void)didReceiveMemoryWarning

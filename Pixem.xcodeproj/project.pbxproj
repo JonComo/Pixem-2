@@ -18,6 +18,9 @@
 		866392A81711E2A80072382F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 866392A71711E2A80072382F /* Default-568h@2x.png */; };
 		866392AB1711E2A80072382F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 866392A91711E2A80072382F /* MainStoryboard.storyboard */; };
 		866392AE1711E2A80072382F /* PMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 866392AD1711E2A80072382F /* PMViewController.m */; };
+		866392B61711E2CC0072382F /* PMPixem.m in Sources */ = {isa = PBXBuildFile; fileRef = 866392B51711E2CC0072382F /* PMPixem.m */; };
+		866392B91711E4060072382F /* PMPixel.m in Sources */ = {isa = PBXBuildFile; fileRef = 866392B81711E4060072382F /* PMPixel.m */; };
+		866392BC1711E53A0072382F /* PMPixemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 866392BB1711E53A0072382F /* PMPixemView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,12 @@
 		866392AA1711E2A80072382F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		866392AC1711E2A80072382F /* PMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMViewController.h; sourceTree = "<group>"; };
 		866392AD1711E2A80072382F /* PMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMViewController.m; sourceTree = "<group>"; };
+		866392B41711E2CC0072382F /* PMPixem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMPixem.h; sourceTree = "<group>"; };
+		866392B51711E2CC0072382F /* PMPixem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMPixem.m; sourceTree = "<group>"; };
+		866392B71711E4060072382F /* PMPixel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMPixel.h; sourceTree = "<group>"; };
+		866392B81711E4060072382F /* PMPixel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMPixel.m; sourceTree = "<group>"; };
+		866392BA1711E53A0072382F /* PMPixemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMPixemView.h; sourceTree = "<group>"; };
+		866392BB1711E53A0072382F /* PMPixemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMPixemView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +95,8 @@
 				866392A01711E2A80072382F /* PMAppDelegate.h */,
 				866392A11711E2A80072382F /* PMAppDelegate.m */,
 				866392A91711E2A80072382F /* MainStoryboard.storyboard */,
-				866392AC1711E2A80072382F /* PMViewController.h */,
-				866392AD1711E2A80072382F /* PMViewController.m */,
+				866392BE1711FDBB0072382F /* View */,
+				866392BD1711FDB10072382F /* Model */,
 				866392981711E2A80072382F /* Supporting Files */,
 			);
 			path = Pixem;
@@ -105,6 +114,28 @@
 				866392A71711E2A80072382F /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		866392BD1711FDB10072382F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				866392B41711E2CC0072382F /* PMPixem.h */,
+				866392B51711E2CC0072382F /* PMPixem.m */,
+				866392B71711E4060072382F /* PMPixel.h */,
+				866392B81711E4060072382F /* PMPixel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		866392BE1711FDBB0072382F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				866392AC1711E2A80072382F /* PMViewController.h */,
+				866392AD1711E2A80072382F /* PMViewController.m */,
+				866392BA1711E53A0072382F /* PMPixemView.h */,
+				866392BB1711E53A0072382F /* PMPixemView.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +208,9 @@
 				8663929E1711E2A80072382F /* main.m in Sources */,
 				866392A21711E2A80072382F /* PMAppDelegate.m in Sources */,
 				866392AE1711E2A80072382F /* PMViewController.m in Sources */,
+				866392B61711E2CC0072382F /* PMPixem.m in Sources */,
+				866392B91711E4060072382F /* PMPixel.m in Sources */,
+				866392BC1711E53A0072382F /* PMPixemView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
