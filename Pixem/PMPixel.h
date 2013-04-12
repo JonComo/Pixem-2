@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PMPixel : NSObject
+@interface PMPixel : NSObject <NSCoding>
 
 @property (nonatomic, strong) UIColor *color;
 @property (nonatomic, weak) PMPixel *n, *s, *e, *w;

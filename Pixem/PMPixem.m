@@ -33,6 +33,9 @@
     if (self = [super init]) {
         //Init
         pixels = [self arrayWithWidth:wide height:high];
+        
+        [self associatePixels];
+        
         _width = wide;
         _height = high;
     }
@@ -40,8 +43,33 @@
     return self;
 }
 
--(PMPixel *)pixelAtX:(u_int)x y:(u_int)y
+-(void)encodeWithCoder:(NSCoder *)aCoder
 {
+    [aCoder encodeObject:pixels forKey:@"pixels"];
+    [aCoder encodeObject:@(self.width) forKey:@"width"];
+    [aCoder encodeObject:@(self.height) forKey:@"height"];
+}
+
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super init]) {
+        //Init
+        pixels = [aDecoder decodeObjectForKey:@"pixels"];
+        self.width = [[aDecoder decodeObjectForKey:@"width"] unsignedIntValue];
+        self.height = [[aDecoder decodeObjectForKey:@"height"] unsignedIntValue];
+    }
+    
+    return self;
+}
+
+-(PMPixel *)pixelAtX:(int)x y:(int)y
+{
+    if (x < 0) x = 0;
+    if (y < 0) y = 0;
+    
+    if (x > self.width - 1) x = self.width - 1;
+    if (y > self.height - 1) y = self.height - 1;
+    
     return pixels[x][y];
 }
 
@@ -55,11 +83,28 @@
         
         for (u_int j = 0; j<height; j++)
         {
-            returnArray[i][j] = [[PMPixel alloc] init];
+            PMPixel *newPixel = [[PMPixel alloc] init];
+            returnArray[i][j] = newPixel;
         }
     }
     
     return returnArray;
+}
+
+-(void)associatePixels
+{
+    for (u_int i = 0; i<self.width; i++)
+    {
+        for (u_int j = 0; j<self.height; j++)
+        {
+            PMPixel *pixel = [self pixelAtX:i y:j];
+            
+            pixel.n = [self pixelAtX:i y:j-1];
+            pixel.s = [self pixelAtX:i y:j+1];
+            pixel.e = [self pixelAtX:i-1 y:j];
+            pixel.w = [self pixelAtX:i+1 y:j];
+        }
+    }
 }
 
 -(void)renderInRect:(CGRect)rect

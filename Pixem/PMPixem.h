@@ -10,13 +10,13 @@
 
 @class PMPixel;
 
-@interface PMPixem : NSObject
+@interface PMPixem : NSObject <NSCoding>
 
 @property u_int width, height;
 
 -(id)init;
 -(id)initWithPixelsWide:(u_int)wide high:(u_int)high;
--(PMPixel *)pixelAtX:(u_int)x y:(u_int)y;
+-(PMPixel *)pixelAtX:(int)x y:(int)y;
 -(void)renderInRect:(CGRect)rect;
 
 @end

@@ -14,14 +14,77 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L3P-y0-45G" customClass="PMPixemView">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" type="user" id="mUR-OM-Ys2"/>
+                                    <constraint firstAttribute="width" constant="320" type="user" id="t5u-Ap-7Jy"/>
+                                </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Too-Rp-0Fm">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clear:" destination="2" eventType="touchUpInside" id="XIw-ab-6Sx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IH4-uR-miA">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadNext:" destination="2" eventType="touchUpInside" id="uqR-im-ixI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHR-ee-sCO">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Prev">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadPrevious:" destination="2" eventType="touchUpInside" id="OuJ-dE-g0z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYE-vH-UEz">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="save:" destination="2" eventType="touchUpInside" id="Xj4-Sa-2VT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="L3P-y0-45G" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="Xd5-Ya-coo"/>
-                            <constraint firstAttribute="bottom" secondItem="L3P-y0-45G" secondAttribute="bottom" constant="228" id="eAk-qe-JKl"/>
-                            <constraint firstItem="L3P-y0-45G" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="ksZ-jm-yyP"/>
-                            <constraint firstItem="L3P-y0-45G" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="skR-xK-ly4"/>
+                            <constraint firstItem="CYE-vH-UEz" firstAttribute="baseline" secondItem="IH4-uR-miA" secondAttribute="baseline" type="default" id="2Re-sd-Ump"/>
+                            <constraint firstItem="CYE-vH-UEz" firstAttribute="baseline" secondItem="Too-Rp-0Fm" secondAttribute="baseline" type="default" id="7bV-jq-Ebt"/>
+                            <constraint firstItem="Too-Rp-0Fm" firstAttribute="baseline" secondItem="IHR-ee-sCO" secondAttribute="baseline" type="default" id="DAE-nw-vCp"/>
+                            <constraint firstItem="IHR-ee-sCO" firstAttribute="top" secondItem="L3P-y0-45G" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ExV-qg-ZXF"/>
+                            <constraint firstItem="IH4-uR-miA" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="Txq-4D-cBC"/>
+                            <constraint firstItem="L3P-y0-45G" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="user" id="Xd5-Ya-coo"/>
+                            <constraint firstAttribute="trailing" secondItem="CYE-vH-UEz" secondAttribute="trailing" constant="83" id="bqn-cm-iyB"/>
+                            <constraint firstItem="Too-Rp-0Fm" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="84" id="kGP-26-4fQ"/>
+                            <constraint firstItem="L3P-y0-45G" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="user" id="ksZ-jm-yyP"/>
+                            <constraint firstItem="IHR-ee-sCO" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="my3-ro-O0R"/>
+                            <constraint firstItem="L3P-y0-45G" firstAttribute="top" secondItem="3" secondAttribute="top" type="user" id="skR-xK-ly4"/>
                         </constraints>
                     </view>
                     <connections>
@@ -30,9 +93,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="122" y="38"/>
+            <point key="canvasLocation" x="-87" y="-68"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PMPixemView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PMPixemView.h"/>
+        </class>
+        <class className="PMViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PMViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="clear:"/>
+                <relationship kind="action" name="loadNext:"/>
+                <relationship kind="action" name="loadPrevious:"/>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="pixelView" candidateClass="PMPixemView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

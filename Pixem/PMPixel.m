@@ -20,4 +20,19 @@
     return self;
 }
 
+-(void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:self.color forKey:@"color"];
+}
+
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super init]) {
+        //Init
+        _color = [aDecoder decodeObjectForKey:@"color"];
+    }
+    
+    return self;
+}
+
 @end

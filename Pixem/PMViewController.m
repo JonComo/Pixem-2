@@ -25,7 +25,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    pixem = [[PMPixem alloc] initWithPixelsWide:40 high:40];
+    pixem = [[PMPixem alloc] initWithPixelsWide:10 high:10];
     pixelView.pixem = pixem;
     
     [pixelView setNeedsDisplay];
@@ -36,5 +36,20 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+//Actions
+
+- (IBAction)loadNext:(id)sender {
+}
+
+- (IBAction)save:(id)sender {
+}
+
+- (IBAction)clear:(id)sender {
+}
+
+- (IBAction)loadPrevious:(id)sender {
+}
+
 
 @end
